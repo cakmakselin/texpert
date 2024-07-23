@@ -1,0 +1,550 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* Ensures the background image stays fixed */
+    color: #ECF0F1;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensure full viewport height */
+    background-color: rgba(255, 255, 255, 0.891); /* Semi-transparent background color */
+}
+
+main {
+    padding-top: 100px; /* Adjust according to header height */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #0a3288;
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+p {
+    color: #2c2f31;
+    margin-bottom: 1em;
+}
+
+/* Header Styles */
+.header {
+    background-color: rgba(255, 255, 255, 0.891); /* Semi-transparent background */
+    padding: 0.5em 1em; /* Adjust height as needed */
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Vertically center items */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    width: 100%;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+/* Header Left Styles */
+.header-left {
+    display: flex;
+    align-items: center; /* Horizontally center items */
+    flex: 1;
+}
+
+.header-left nav {
+    margin: 0; /* Remove default margin */
+}
+
+.header-left nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex; /* Ensure menu items are in a row */
+    margin: 0;
+}
+
+.header-left nav ul li {
+    margin: 0 15px;
+    position: relative; /* Required for dropdown positioning */
+}
+
+.header-left nav ul li a {
+    text-decoration: none;
+    color: #0a3288;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.header-left nav ul li a:hover {
+    color: #0a3288;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    content: ' ▼';
+    font-size: 0.8em;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: rgba(228, 229, 240, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 0.5em;
+    z-index: 1000;
+    min-width: 150px;
+}
+
+.dropdown-menu a {
+    display: block;
+    padding: 0.5em 1em;
+    color: #0a3288;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.dropdown-menu a:hover {
+    background-color: #8d94b6;
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Header Center Styles */
+.header-center {
+    display: flex;
+    justify-content: center; /* Center logo horizontally */
+    flex: 2;
+}
+
+.logo {
+    max-width: 450px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Header Right Styles */
+.header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 10px; /* Space between buttons */
+    flex: 1;
+}
+
+.language-btn, .login-btn {
+    background: none;
+    border: none;
+    color: #0a3288;
+    padding: 0.5em 1em;
+    cursor: pointer;
+    font-size: 1.2em;
+}
+
+.language-btn:hover, .login-btn:hover {
+    color: #0a3288;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header {
+        flex-wrap: wrap;
+        text-align: center;
+    }
+
+    .header-left, .header-right {
+        flex: 1 1 100%; /* Make each section full width on small screens */
+        justify-content: center;
+        margin-bottom: 10px; /* Space below header sections */
+    }
+
+    .header-center {
+        flex: 1 1 100%;
+    }
+
+    .header-left nav ul {
+        flex-direction: column; /* Stack navigation items vertically */
+        align-items: center;
+    }
+
+    .header-left nav ul li {
+        margin: 5px 0;
+    }
+
+    .dropdown-menu {
+        position: static; /* Change dropdown position to static */
+        box-shadow: none;
+    }
+}
+
+
+
+/* Grid Section */
+.products-section {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+    flex: 1; /* Grow to fill remaining space */
+    position: relative; /* Ensure stacking context for background */
+    z-index: 0; /* Ensure content is behind header */
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 2em;
+}
+
+.grid-box {
+    background-color: #1A252F;
+    padding: 2em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid-box img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1em;
+}
+
+.grid-box h2 {
+    margin-bottom: 1em;
+}
+
+.grid-box p {
+    margin-bottom: 1.5em;
+    color: #BDC3C7;
+}
+
+.grid-box a {
+    background-color: rgba(0, 0, 0, 0.4);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+/* Welcome Section */
+.welcome-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* Adjust height to account for header */
+    background-color: #ffffff; /* Fallback color */
+    position: relative;
+    overflow: hidden;
+    padding-top: 20px; /* Ensure the welcome text is not covered by the fixed header */
+}
+
+.welcome-text {
+    text-align: center;
+    position: relative;
+    z-index: 1; /* Ensure the text is above other elements */
+    margin-top: 0; /* Remove margin-top to reduce space from header */
+    margin-bottom: 0; /* Optional: remove margin-bottom if needed */
+}
+
+.welcome-text h1 {
+    font-size: 10em; /* Initial large size */
+    margin: 0;
+    background: url('../images/colorsplash.jpg') no-repeat center center;
+    background-size: cover;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: textAnimation 3s forwards;
+    text-shadow: 0 0 0.1em rgba(0, 0, 0, 0.3); /* Optional: add subtle text shadow for better visibility */
+}
+
+.welcome-text p {
+    font-size: 3em;
+    color: #BDC3C7;
+}
+/* Buttons */
+.welcome-buttons {
+    margin-top: 20px; /* Adjust spacing between text and buttons */
+}
+
+.welcome-buttons .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1.5em;
+    margin: 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Drop Animation */
+.drop {
+    position: absolute;
+    top: -100px; /* Start above the viewport */
+    width: 50px;
+    height: 50px;
+    background-color: rgb(175, 47, 47);
+    border-radius: 50%;
+    animation: dropAnimation 4s forwards;
+}
+
+@keyframes dropAnimation {
+    0% {
+        top: -100px; /* Start position */
+        opacity: 1;
+    }
+    100% {
+        top: 45%; /* End position */
+        opacity: 0; /* Fade out */
+    }
+}
+
+.btn-primary {
+    background-color: #1A252F;
+    color: #ECF0F1;
+}
+
+.btn-primary:hover {
+    background-color: #535556;
+}
+
+.btn-secondary {
+    background-color: #1A252F;
+    color: #ECF0F1;
+}
+
+.btn-secondary:hover {
+    background-color: #535556;
+}
+
+/* Animation */
+@keyframes textAnimation {
+    from {
+        opacity: 0.1;
+        transform: translateY(100px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Products Section */
+.products-section {
+    padding: 60px 20px; /* Adjust padding for spacing from header */
+}
+
+.products-section h1 {
+    color: #ECF0F1;
+    margin-bottom: 30px;
+}
+
+.product-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    width: 100%; /* Make rows full width */
+    max-width: 5000px; /* Adjust the maximum width for rows */
+    margin: 0 auto; /* Center rows horizontally */
+}
+
+.product-info {
+    flex: 1;
+    padding-right: 10px;
+    padding-bottom: 30px;
+}
+
+.product-info h2 {
+    margin: 0;
+    color: #45494a;
+}
+
+.product-info p {
+    font-size: 1em;
+    color: #BDC3C7;
+}
+
+.product-image {
+    max-width: 300px; /* Adjust image size as needed */
+    height: auto;
+    border-radius: 10px;
+}
+
+.product-buttons {
+    margin-top: 10px;
+}
+
+.product-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px 0;
+    background-color: #1A252F;
+    color: #ECF0F1;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.product-btn:hover {
+    background-color: #535556;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    padding: 20px;
+}
+
+.product-box {
+    border: 1px solid #ddd;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.main-content {
+    padding-top: 200px; /* Adjust based on the header height */
+}
+
+/* FAQ Styles */
+.faq-section {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-container {
+    margin-top: 20px;
+}
+
+.faq-item {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.faq-item h2 {
+    margin-bottom: 10px;
+}
+
+.faq-item p {
+    margin: 0;
+}
+
+/* Contact Section */
+.contact-section {
+    padding: 40px 20px; /* Adjust padding for spacing */
+    display: flex;
+    justify-content: center; /* Center containers horizontally */
+    align-items: center; /* Center containers vertically if needed */
+    flex-direction: column; /* Stack heading and containers vertically */
+}
+
+.contact-section h1 {
+    margin-bottom: 20px; /* Space below the heading */
+}
+
+.contact-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    gap: 20px;
+}
+
+
+.contact-left, .contact-right {
+    flex: 1;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+.map-container {
+    margin-top: 20px;
+}
+
+.contact-right form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-right form label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.contact-right form input, 
+.contact-right form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.contact-right form button {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-right form button:hover {
+    background-color: #555;
+}
+
+/* Footer Styles */
+.footer {
+    text-align: center;
+    padding: 1em;
+    background-color: #BDC3C7;
+    color: #ECF0F1;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
+    margin-top: 20px; /* Add space before footer */
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+
+    body {
+        font-size: 1.125rem; /* Slightly larger font size on tablets */
+    }
+
+    h1 {
+        font-size: 2.25rem;
+    }
+
+
+    .header, .main-content, .footer {
+        padding: 20px;
+    }
+    .item {
+        flex: 1 1 47%; /* Three items per row on desktops */
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+ 
+
+}
+
