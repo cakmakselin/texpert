@@ -6,60 +6,67 @@
     <title>Texpert - Home</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
     <header class="header">
         <div class="header-left">
-            <nav>
-                <ul>
-                    <li><a href="index.html">HOME</a></li>
-                    <li class="dropdown">
-                        <a href="products.html" class="dropdown-toggle">PRODUCTS</a>
-                        <div class="dropdown-menu">
-                            <a href="products/printing-products.html">Printing Products</a>
-                            <a href="products/dyeing-products.html">Dyeing Products</a>
-                            <a href="products/pre-operation-products.html">Pre-Operation Products</a>
-                            <a href="products/finishing-products.html">Finishing Products</a>
-                            <a href="products/other-products.html">Other Products</a>
-                        </div>
-                    </li>
-                    <li><a href="about-us.html">ABOUT US</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
-                </ul>
-            </nav>
-        </div>
-        <div class="header-center">
-            <img src="images/logo.jpg" alt="Texpert Logo" class="logo">
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="Texpert Logo" class="logo">
+            </a>
         </div>
         <div class="header-right">
-            <div class="dropdown">
-                <button class="language-btn dropdown-toggle">EN | TR</button>
-                <div class="dropdown-menu">
-                    <a href="index.html">English</a>
-                    <a href="index-tr.html">Türkçe</a>
-                </div>
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="products.html">>PRODUCTS</a></li>
+                    <li><a href="about-us.html">>ABOUT</a></li>
+                    <li><a href="contact.html">>CONTACT</a></li>
+                    <li><a href="faq.html">>FAQ</a></li>
+                </ul>
+            </nav>
+            <button class="language-toggle"><i class="fas fa-globe"></i></button>
+            <div class="language-dropdown">
+                <a href="index.html">English</a>
+                <a href="index-tr.html">Türkçe</a>
             </div>
-            <button class="login-btn">Login</button>
         </div>
     </header>
 
     <main>
         <section class="welcome-section">
-            <div class="drop"></div>
-            <div class="welcome-text">
-                <h1>Welcome to Texpert</h1>
-                <p>where innovation meets quality since 2001</p>
-                <div class="welcome-buttons">
-                    <a href="products.html" class="btn btn-primary">Explore Our Products</a>
-                    <a href="about-us.html" class="btn btn-secondary">About Us</a>
+            <div class="image-box" style="background-image: url('images/welcome_background2.jpg');">
+                <div class="image-box-content">
+                    <div class="welcome-buttons">
+                        <a href="products.html" class="btn btn-primary">Explore Our Products</a>
+                    </div>
                 </div>
             </div>
+
+            <div class="textbox">
+                <p>Texpert, originating from within the industry, develops products that provide solutions to the challenges faced by textile enterprises. We address issues such as fiber, settlement, business, machinery, paint, and chemical quality as a whole, offering comprehensive solutions to prevent clogging and other operational problems.</p>
+                <div class="textbox-buttons">
+                    <a href="about-us.html" class="btn btn-primary">About Us</a>
+                </div>
+            </div>
+
+            <div class="textbox left-right">
+                <div class="textbox-left">
+                    <p>Questions?</p>
+                    <a href="faq.html" class="btn btn-primary">Visit FAQ</a>
+                </div>
+                <div class="textbox-right">
+                    <p>Interested?</p>
+                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+
         </section>
     </main>
-    <script src="scripts.js"></script> 
+
     <footer class="footer">
-        <p>&copy; 2024 Texpert. All rights reserved.</p>
+        <p>&copy; 2024 Texpert</p>
     </footer>
 </body>
 </html>

@@ -1,550 +1,696 @@
 /* General Styles */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed; /* Ensures the background image stays fixed */
+    font-family: 'Rubik', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: rgb(18, 8, 8);
     color: #ECF0F1;
     margin: 0;
     padding: 0;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Ensure full viewport height */
-    background-color: rgba(255, 255, 255, 0.891); /* Semi-transparent background color */
+    min-height: 100vh;
 }
 
 main {
-    padding-top: 100px; /* Adjust according to header height */
+    flex: 1;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #0a3288;
-    margin-bottom: 0.5em;
+h1 {
+    font-size: 3em;
+    color: #ffffff;
+    margin-bottom: 1.5em;
     text-align: left;
+    font-weight: 450;
+}
+
+h2, h3, h4, h5, h6 {
+    font-size: 2em;
+    margin: 0.5em 0;
+    color: #514545;
 }
 
 p {
-    color: #2c2f31;
+    color: #ffffff;
     margin-bottom: 1em;
+    font-weight: 100;
 }
 
 /* Header Styles */
 .header {
-    background-color: rgba(255, 255, 255, 0.891); /* Semi-transparent background */
-    padding: 0.5em 1em; /* Adjust height as needed */
+    background-color: rgba(18, 8, 8);
+    padding: 1em 4em;
     display: flex;
+    position: fixed;
     justify-content: space-between;
-    align-items: center; /* Vertically center items */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    position: sticky;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.);
     top: 0;
     width: 100%;
     box-sizing: border-box;
     z-index: 1000;
 }
 
-/* Header Left Styles */
 .header-left {
     display: flex;
-    align-items: center; /* Horizontally center items */
-    flex: 1;
+    align-items: center;
+    gap: 15px;
 }
 
-.header-left nav {
-    margin: 0; /* Remove default margin */
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 
-.header-left nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex; /* Ensure menu items are in a row */
-    margin: 0;
+.logo {
+    max-width: 70%;
+    height: auto;
 }
 
-.header-left nav ul li {
-    margin: 0 15px;
-    position: relative; /* Required for dropdown positioning */
+.language-toggle {
+    background: none;
+    border: none;
+    color: #ffffff;
+    font-size: 1.5em;
+    cursor: pointer;
 }
 
-.header-left nav ul li a {
-    text-decoration: none;
-    color: #0a3288;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-.header-left nav ul li a:hover {
-    color: #0a3288;
-}
-
-/* Dropdown Styles */
-.dropdown {
-    position: relative;
-}
-
-.dropdown-toggle::after {
-    content: ' ▼';
-    font-size: 0.8em;
-}
-
-.dropdown-menu {
+.language-dropdown {
     display: none;
     position: absolute;
     top: 100%;
-    left: 0;
-    background-color: rgba(228, 229, 240, 0.9);
+    right: 0;
+    background-color: rgba(255, 255, 255, 0.891);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    padding: 0.5em 1em;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    padding: 0.5em;
     z-index: 1000;
     min-width: 150px;
 }
 
-.dropdown-menu a {
+.language-dropdown a {
     display: block;
-    padding: 0.5em 1em;
+    padding: 10px 0;
     color: #0a3288;
     text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s;
-}
-
-.dropdown-menu a:hover {
-    background-color: #8d94b6;
-}
-
-.dropdown:hover .dropdown-menu {
     display: block;
 }
 
-/* Header Center Styles */
-.header-center {
-    display: flex;
-    justify-content: center; /* Center logo horizontally */
-    flex: 2;
+.language-dropdown a:hover {
+    color: #0a3288;
 }
 
-.logo {
-    max-width: 450px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
+.language-dropdown.active {
+    display: block;
 }
 
-/* Header Right Styles */
-.header-right {
+
+.nav-menu {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    gap: 10px; /* Space between buttons */
-    flex: 1;
+    flex-direction: row;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    width: auto;
 }
 
-.language-btn, .login-btn {
-    background: none;
-    border: none;
-    color: #0a3288;
-    padding: 0.5em 1em;
-    cursor: pointer;
-    font-size: 1.2em;
+.nav-menu ul {
+    list-style: none;
+    display: flex; /* Ensure that list items are displayed inline */
+    padding: 0;
+    margin: 0;
 }
 
-.language-btn:hover, .login-btn:hover {
-    color: #0a3288;
+.nav-menu li {
+    margin: 0.5em 0; /* Add spacing between items */
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .header {
-        flex-wrap: wrap;
-        text-align: center;
-    }
-
-    .header-left, .header-right {
-        flex: 1 1 100%; /* Make each section full width on small screens */
-        justify-content: center;
-        margin-bottom: 10px; /* Space below header sections */
-    }
-
-    .header-center {
-        flex: 1 1 100%;
-    }
-
-    .header-left nav ul {
-        flex-direction: column; /* Stack navigation items vertically */
-        align-items: center;
-    }
-
-    .header-left nav ul li {
-        margin: 5px 0;
-    }
-
-    .dropdown-menu {
-        position: static; /* Change dropdown position to static */
-        box-shadow: none;
-    }
-}
-
-
-
-/* Grid Section */
-.products-section {
-    padding: 2em;
-    max-width: 1200px;
-    margin: 0 auto;
-    flex: 1; /* Grow to fill remaining space */
-    position: relative; /* Ensure stacking context for background */
-    z-index: 0; /* Ensure content is behind header */
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr); /* 3 columns */
-    gap: 2em;
-}
-
-.grid-box {
-    background-color: #1A252F;
-    padding: 2em;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-.grid-box img {
-    max-width: 100%;
-    border-radius: 10px;
-    margin-bottom: 1em;
-}
-
-.grid-box h2 {
-    margin-bottom: 1em;
-}
-
-.grid-box p {
-    margin-bottom: 1.5em;
-    color: #BDC3C7;
-}
-
-.grid-box a {
-    background-color: rgba(0, 0, 0, 0.4);
+.nav-menu a {
+    display: block;
+    font-size: 2em;
+    text-decoration: none; /* Remove underlines */
+    padding: 2vh;
+    font-size: 2em;
+    font-weight: 100;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-/* Welcome Section */
-.welcome-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 60px); /* Adjust height to account for header */
-    background-color: #ffffff; /* Fallback color */
-    position: relative;
-    overflow: hidden;
-    padding-top: 20px; /* Ensure the welcome text is not covered by the fixed header */
-}
-
-.welcome-text {
     text-align: center;
-    position: relative;
-    z-index: 1; /* Ensure the text is above other elements */
-    margin-top: 0; /* Remove margin-top to reduce space from header */
-    margin-bottom: 0; /* Optional: remove margin-bottom if needed */
+    display: block;
+    transition: background-color 0.3s ease;
 }
 
-.welcome-text h1 {
-    font-size: 10em; /* Initial large size */
-    margin: 0;
-    background: url('../images/colorsplash.jpg') no-repeat center center;
-    background-size: cover;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    animation: textAnimation 3s forwards;
-    text-shadow: 0 0 0.1em rgba(0, 0, 0, 0.3); /* Optional: add subtle text shadow for better visibility */
-}
-
-.welcome-text p {
-    font-size: 3em;
-    color: #BDC3C7;
-}
-/* Buttons */
-.welcome-buttons {
-    margin-top: 20px; /* Adjust spacing between text and buttons */
-}
-
-.welcome-buttons .btn {
-    display: inline-block;
-    padding: 10px 20px;
+.nav-menu a:hover {
+    color: #0a3288;;
     border-radius: 5px;
-    text-decoration: none;
-    font-size: 1.5em;
-    margin: 10px;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-/* Drop Animation */
-.drop {
-    position: absolute;
-    top: -100px; /* Start above the viewport */
-    width: 50px;
-    height: 50px;
-    background-color: rgb(175, 47, 47);
-    border-radius: 50%;
-    animation: dropAnimation 4s forwards;
-}
-
-@keyframes dropAnimation {
-    0% {
-        top: -100px; /* Start position */
-        opacity: 1;
-    }
-    100% {
-        top: 45%; /* End position */
-        opacity: 0; /* Fade out */
-    }
-}
-
-.btn-primary {
-    background-color: #1A252F;
-    color: #ECF0F1;
-}
-
-.btn-primary:hover {
-    background-color: #535556;
-}
-
-.btn-secondary {
-    background-color: #1A252F;
-    color: #ECF0F1;
-}
-
-.btn-secondary:hover {
-    background-color: #535556;
-}
-
-/* Animation */
-@keyframes textAnimation {
-    from {
-        opacity: 0.1;
-        transform: translateY(100px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* Products Section */
-.products-section {
-    padding: 60px 20px; /* Adjust padding for spacing from header */
-}
-
-.products-section h1 {
-    color: #ECF0F1;
-    margin-bottom: 30px;
-}
-
-.product-row {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    width: 100%; /* Make rows full width */
-    max-width: 5000px; /* Adjust the maximum width for rows */
-    margin: 0 auto; /* Center rows horizontally */
-}
-
-.product-info {
-    flex: 1;
-    padding-right: 10px;
-    padding-bottom: 30px;
-}
-
-.product-info h2 {
-    margin: 0;
-    color: #45494a;
-}
-
-.product-info p {
-    font-size: 1em;
-    color: #BDC3C7;
-}
-
-.product-image {
-    max-width: 300px; /* Adjust image size as needed */
-    height: auto;
-    border-radius: 10px;
-}
-
-.product-buttons {
-    margin-top: 10px;
-}
-
-.product-btn {
-    display: inline-block;
-    padding: 10px 20px;
-    margin: 5px 0;
-    background-color: #1A252F;
-    color: #ECF0F1;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.product-btn:hover {
-    background-color: #535556;
-}
-
-.product-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    padding: 20px;
-}
-
-.product-box {
-    border: 1px solid #ddd;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-.main-content {
-    padding-top: 200px; /* Adjust based on the header height */
-}
-
-/* FAQ Styles */
-.faq-section {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.faq-container {
-    margin-top: 20px;
-}
-
-.faq-item {
-    margin-bottom: 20px;
-    padding: 20px;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.faq-item h2 {
-    margin-bottom: 10px;
-}
-
-.faq-item p {
-    margin: 0;
-}
-
-/* Contact Section */
-.contact-section {
-    padding: 40px 20px; /* Adjust padding for spacing */
-    display: flex;
-    justify-content: center; /* Center containers horizontally */
-    align-items: center; /* Center containers vertically if needed */
-    flex-direction: column; /* Stack heading and containers vertically */
-}
-
-.contact-section h1 {
-    margin-bottom: 20px; /* Space below the heading */
-}
-
-.contact-container {
-    display: flex;
-    width: 100%;
-    max-width: 1200px;
-    gap: 20px;
-}
-
-
-.contact-left, .contact-right {
-    flex: 1;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    border: 1px solid #ddd;
-    border-radius: 8px;
-}
-
-.map-container {
-    margin-top: 20px;
-}
-
-.contact-right form {
-    display: flex;
-    flex-direction: column;
-}
-
-.contact-right form label {
-    margin-bottom: 5px;
-    font-weight: bold;
-}
-
-.contact-right form input, 
-.contact-right form textarea {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-.contact-right form button {
-    padding: 10px;
-    background-color: #333;
-    color: #fff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
-
-.contact-right form button:hover {
-    background-color: #555;
 }
 
 /* Footer Styles */
 .footer {
     text-align: center;
-    padding: 1em;
-    background-color: #BDC3C7;
-    color: #ECF0F1;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.2);
-    margin-top: 20px; /* Add space before footer */
+    font-weight: 100;
+    padding: 0.5em;
+    background-color: rgb(18, 8, 8);
+    color: #ffffff;
     width: 100%;
 }
 
-@media (max-width: 768px) {
+/* Welcome Section */
+.welcome-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
 
-    body {
-        font-size: 1.125rem; /* Slightly larger font size on tablets */
-    }
+.image-box {
+    position: relative;
+    align-content: center;
+    justify-content: center;
+    background-size: cover; /* Ensure the background image covers the container */
+    background-position: center; /* Start with centered background image */
+    background-repeat: no-repeat;
+    padding: 50px;
+    text-align: center;
+    margin-top: 130vh;
+    margin-bottom: 30vh;
+    width: 100%;
+    max-width: 100%;
+    height: 50vh; 
+    color: (18, 8, 8);
+    border: 15px solid (18, 8, 8);
+    box-sizing: content-box;
+    overflow: hidden; /* Hide overflow to avoid scrollbars due to zoom effect */
+}
+.image-box-content {
+    position: relative; /* Ensure the content stays in place */
+    z-index: 1; /* Make sure text appears above the zooming background */
+}
 
-    h1 {
-        font-size: 2.25rem;
-    }
+.image-box.zoom {
+    background-size: 110%; /* Zoom in by increasing background size */
+    transition: background-size 1s ease; /* Smooth transition for zoom effect */
+}
+
+.image-box h1 {
+    font-size: 2.5em;
+    font-weight: 300;
+    color: white;
+    text-align: center;
+}
+
+.image-box p {
+    font-size: 1.5em;
+    margin: 1em 0;
+    color: #dde2e5;
+}
+
+.image-box .btn-primary {
+    color: #ECF0F1;
+    padding: 20px 20px;
+    border: 1.5px solid white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 2em;
+    transition: background-color 0.3s ease;
+    max-width: 20%; 
+}
+
+.btn-primary:hover {
+    background-color: #cb4343;
+    border-radius: 30px;
+}
+
+.textbox {
+    background-color: (18, 8, 8);
+    align-content: center;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 80%;
+    margin-top: 0vh;
+    margin-bottom: 20vh;
+    box-sizing: content-box;
+    text-align: center;
+    align-self: center;
+}
 
 
-    .header, .main-content, .footer {
-        padding: 20px;
-    }
-    .item {
-        flex: 1 1 47%; /* Three items per row on desktops */
-    }
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    .grid-container {
-        grid-template-columns: repeat(2, 1fr);
-    }
- 
+.textbox p {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    color: #dde2e5;
+}
+
+.textbox-buttons {
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px;
+    justify-content: center;
+}
+
+.textbox-buttons .btn-primary {
+    color: #ECF0F1;
+    padding: 20px 50px;
+    border: 1.5px solid white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.7em;
+    transition: background-color 0.3s ease;
+}
+
+
+.textbox-buttons .btn-primary:hover {
+    background-color: #cb4343;
+    border-radius: 30px;
+}
+
+
+/* Left-right sectioned textbox layout */
+.textbox.left-right {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 100%;
+}
+
+.textbox.left-right .textbox-left,
+.textbox.left-right .textbox-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+}
+
+.textbox.left-right .textbox-left p,
+.textbox.left-right .textbox-right p {
+    font-size: 2.5em;
+    color: #dde2e5;
+}
+
+.textbox.left-right .textbox-left .btn-primary,
+.textbox.left-right .textbox-right .btn-primary {
+    color: #ECF0F1;
+    padding: 20px 50px;
+    border: 1.5px solid white;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 1.7em; /* Slightly reduced font size */
+    transition: background-color 0.3s ease;
+    width: auto; /* Ensure the button sizes according to its content */
+    max-width: 70%; /* Limit the width to make the button narrower */
+    margin: 0 auto; /* Center the buttons */
+    text-align: center;
+}
+
+
+/* */
+/* */
+/* */
+/* Product Section */
+
+.product-carousel {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.carousel-container {
+    display: flex;
+    align-items: center;
+    gap: 5%;
+    width: 100%;
 
 }
 
+.carousel-card {
+    gap: 10vh;
+    position: relative;
+    width: 300px;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin: 0 10px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-content {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    padding: 100px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.card-content a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.slick-prev, .slick-next {
+    font-size: 24px;
+    color: black;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.slick-prev {
+    left: -40px;
+}
+
+.slick-next {
+    right: -40px;
+}
+/* */
+/* */
+/* */
+/* Contact Section */
+.contact-section {
+    background-color: (18, 8, 8);
+    align-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 100%;
+    margin: 15%;
+    box-sizing: content-box;
+    text-align: center;
+    align-self: center;
+    margin-top: 120vh;
+}
+
+.contact-section h1{
+    font-size: 3em;
+    margin-bottom: 2px;
+    text-align: center;
+    margin-top: 0vh;
+    margin-bottom: 10vh;
+    font-weight: 0.5;
+}
+
+/* Contact Information */
+.contact-info {
+    display: flex;
+    justify-content: center;
+    gap: 10vh;
+    margin-bottom: 0vh;
+    text-align: center;
+}
+
+.info-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+    color: #dde2e5;
+}
+
+.info-item i {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.info-item p {
+    font-size: 1.7em;
+    margin-bottom: 2px;
+}
+
+/* Map */
+.map-section {
+    width: 100%;
+    margin-top: 10vh;
+    margin-bottom: 10vh;
+}
+
+.map-section iframe {
+    width: 100%;
+    height: 300px;
+    border: none;
+}
+
+/* Contact Form */
+.contact-form {
+    border-radius: 30px;
+    max-width: 70%;
+    margin: 0 auto; /* Center the form horizontally */
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.contact-form label {
+    font-size: 2em;
+    color: #ddd; /* Adjust color for better readability */
+    margin-bottom: 0px; /* Space between label and input */
+    text-align: left; /* Left align labels */
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ddd;
+    background-color: rgb(18, 8, 8);
+    border-radius: 4px;
+    font-size: 1.7em;
+}
+
+.contact-form textarea {
+    resize: horizontal; /* Allow vertical resizing */
+}
+
+.contact-form button {
+    background-color: rgb(18, 8, 8);
+    border-color: #ffffff;
+    color: white;
+    padding: 20px 20px;
+    font-size: 1.7em;
+    border-radius: 30px;
+    cursor: pointer;
+    width: 200px;
+    transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+    background-color: #cb4343;
+    border-radius: 45px;
+}
+
+/* FAQ Section Styles */
+.faq-section {
+    padding: 20px;
+}
+
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq-item h2 {
+    font-size: 1.5em;
+    margin: 0.5em 0;
+}
+
+.faq-item p {
+    margin: 0.5em 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+
+    .header {
+        padding: 1em 2em;
+        margin: 0em 1;
+        justify-content: space-between;
+        align-items: center;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.);
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 10%;
+        box-sizing: border-box;
+        z-index: 1000;
+        margin-bottom: 30vh;
+        margin-top: 0%;
+    }
+    .nav-menu {
+        flex-direction: row;
+    }
+
+    .nav-menu a {
+        font-size: 0.5em; /* Adjust font size for smaller screens */
+        padding: 0.5vh;
+    }
+
+    .nav-menu li {
+        margin: 0em 0; /* Add spacing between items */
+    }
+
+    .language-toggle {
+        font-size: 0.7em;
+
+    }
+
+    .image-box {
+        height: 60vh; 
+        width:50vh;
+        padding: 10px;
+        margin-top: 50vh;
+    }
+
+    .image-box h1 {
+        font-size: 0.9em; 
+    }
+
+    .textbox {
+        opacity: 0;
+        transform: translateY(40px); /* Start slightly below */
+        transition: opacity 3s ease-out, transform 3s ease-out;
+        margin-bottom: 15vh;
+    }
+    
+    .textbox.visible {
+        opacity: 1;
+        transform: translateY(0); /* Move to original position */
+    }
+
+    .textbox p {
+        font-size: 0.9em; 
+        font-weight: 100;
+    }
+
+    .textbox-buttons .btn-primary {
+        color: #ffffff;
+        border: 1px solid #ffeded;
+        font-size: 0.7em;
+        padding: 10px 20px;
+
+    }
+    .textbox.left-right .textbox-left p,
+    .textbox.left-right .textbox-right p {
+        font-size: 0.9em;
+        color: #dde2e5;
+    }
+
+    .textbox.left-right .textbox-left .btn-primary,
+    .textbox.left-right .textbox-right .btn-primary {
+        padding: 10px 20px;
+        border: 1px solid white;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 0.7em;
+        transition: background-color 0.3s ease;
+    }
+ 
+
+    .image-box .btn-primary {
+        padding: 10px 20px;
+        border: 1px solid white;
+        border-radius: 30px;
+        text-decoration: none;
+        font-size: 0.7em;
+        transition: background-color 0.3s ease;
+    }
+
+
+    .footer {
+        padding: 0.2em;
+        font-size: 0.2em; 
+    }
+
+    .contact-section {
+        padding: 20px;
+        border-radius: 10px;
+        width: 100%;
+        max-width: 100%;
+        margin: 15%;
+        box-sizing: content-box;
+        text-align: center;
+        align-self: center;
+        margin-top: 130vh;
+    }
+    
+    .contact-section h1{
+        font-size: 2em;
+        margin-bottom: 1px;
+        text-align: center;
+        margin-top: 2vh;
+        margin-bottom: 10vh;
+        font-weight: 0.5;
+    }
+
+    .contact-info {
+        flex-direction: column; /* Stack info-items vertically on smaller screens */
+        gap: 20px; /* Adjust spacing between items for smaller screens */
+        font-size: 0.5em;
+    }
+
+    .info-item {
+        width: 100%; /* Ensure each item takes full width on mobile */
+        text-align: center; /* Center text within each item */
+    }
+
+    .contact-form {
+        border-radius: 30px;
+        max-width: 70%;
+        margin: 0 auto; /* Center the form horizontally */
+    }
+    
+    .contact-form form {
+        gap: 15px;
+    }
+    
+    .contact-form label {
+        font-size: 0.8em;
+        margin-bottom: 0px; /* Space between label and input */
+        text-align: left; /* Left align labels */
+    }
+    
+    .contact-form input,
+    .contact-form textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ddd;
+        background-color: rgb(18, 8, 8);
+        border-radius: 4px;
+        font-size: 1.7em;
+    }
+    
+    .contact-form textarea {
+        resize: horizontal; /* Allow vertical resizing */
+    }
+    
+    .contact-form button {
+        background-color: rgb(18, 8, 8);
+        border-color: #ffffff;
+        color: white;
+        padding: 15px 30px;
+        font-size: 0.7em;
+        border-radius: 30px;
+        cursor: pointer;
+        width: 100px;
+        transition: background-color 0.3s ease;
+    }
+}

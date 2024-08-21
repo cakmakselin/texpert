@@ -1,64 +1,72 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Texpert - Ana Sayfa</title>
+    <title>Texpert - Home</title>
     <link rel="stylesheet" href="css/styles.css">
     <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
+
     <header class="header">
         <div class="header-left">
-            <nav>
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="Texpert Logo" class="logo">
+            </a>
+        </div>
+        <div class="header-right">
+            <nav class="nav-menu">
                 <ul>
-                    <li><a href="index-tr.html">ANA SAYFA</a></li>
-                    <li class="dropdown">
-                        <a href="products-tr.html" class="dropdown-toggle">ÜRÜNLER</a>
-                        <div class="dropdown-menu">
-                            <a href="printing-products-tr.html">Baskı</a>
-                            <a href="dyeing-products-tr.html">Düzboya</a>
-                            <a href="pre-operation-products-tr.html">Ön işlem</a>
-                            <a href="finishing-products-tr.html">Apre</a>
-                            <a href="other-products-tr.html">Diğer</a>
-                        </div>
-                    </li>
+                    <li><a href="products-tr.html">ÜRÜNLER</a></li>
                     <li><a href="about-us-tr.html">HAKKIMIZDA</a></li>
                     <li><a href="contact-tr.html">ILETISIM</a></li>
                     <li><a href="faq-tr.html">SSS</a></li>
                 </ul>
             </nav>
-        </div>
-        <div class="header-center">
-            <img src="images/logo.jpg" alt="Texpert Logo" class="logo">
-        </div>
-        <div class="header-right">
-            <div class="dropdown">
-                <button class="language-btn dropdown-toggle">EN | TR</button>
-                <div class="dropdown-menu">
-                    <a href="index.html">English</a>
-                    <a href="index-tr.html">Türkçe</a>
-                </div>
+            <button class="language-toggle"><i class="fas fa-globe"></i></button>
+            <div class="language-dropdown">
+                <a href="index.html">English</a>
+                <a href="index-tr.html">Türkçe</a>
             </div>
-            <button class="login-btn">Üye Girişi</button>
         </div>
     </header>
 
     <main>
         <section class="welcome-section">
-            <div class="welcome-text">
-                <h1>Texpert'e Hoşgeldiniz</h1>
-                <p>2001'den beri inovasyonun kalitesiyle buluştuğu yer</p>
-                <div class="welcome-buttons">
-                    <a href="products.html" class="btn btn-primary">Ürünlerimizi keşfedin</a>
-                    <a href="about-us.html" class="btn btn-secondary">Hakkımızda</a>
+            <div class="image-box" style="background-image: url('images/welcome_background2.jpg');">
+                <div class="image-box-content">
+                    <div class="welcome-buttons">
+                        <a href="products.html" class="btn btn-primary">Ürünlerimizi keşfedin</a>
+                    </div>
                 </div>
             </div>
+
+            <div class="textbox">
+                <p>Texpert aims to focus on quality and cost elements that pave the way for businesses, bringing a new perspective that solves problems.</p>
+                <div class="textbox-buttons">
+                    <a href="about-us.html" class="btn btn-primary">Hakkımızda</a>
+                </div>
+            </div>
+
+            <div class="textbox left-right">
+                <div class="textbox-left">
+                    <p>Sorunuz mu var?</p>
+                    <a href="about-us.html" class="btn btn-primary">SSS</a>
+                </div>
+                <div class="textbox-right">
+                    <p>Interested?</p>
+                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+
         </section>
     </main>
-    <script src="scripts.js"></script> 
+
     <footer class="footer">
-        <p>&copy; 2024 Texpert. All rights reserved.</p>
+        <p>&copy; 2024 Texpert</p>
     </footer>
 </body>
 </html>
