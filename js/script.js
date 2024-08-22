@@ -30,4 +30,45 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+document.addEventListener('DOMContentLoaded', function() {
+    const carouselContainer = document.querySelector('.product-carousel');
+    const productList = document.querySelector('.product-list');
+    const carouselCards = document.querySelectorAll('.carousel-card');
+
+    carouselCards.forEach(card => {
+        card.addEventListener('click', function() {
+            const targetPage = card.getAttribute('data-target');
+            if (targetPage) {
+                carouselContainer.classList.add('hidden');
+                productList.classList.add('show');
+                
+                setTimeout(() => {
+                    window.location.href = targetPage; // Navigate to the target page
+                }, 200); // Match this delay with the duration of the transition
+            }
+        });
+    });
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Get the product list element
+    var productList = document.querySelector('.product-list');
+
+    // Add the 'show' class after a short delay to trigger the animation
+    setTimeout(function() {
+        productList.classList.add('show');
+    }, 100); // Delay to ensure the page has fully loaded
+});
+
+$(document).ready(function(){
+    $('.carousel-container').slick({
+        dots: true,
+        infinite: true,
+        speed: 100,
+        slidesToShow: 3,
+        slidesToScroll: 1
+    });
+});
+
+
 

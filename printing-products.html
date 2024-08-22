@@ -3,14 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Printing Products</title>
-    <link rel="stylesheet" href="../css/styles.css">
-    <script src="../js/script.js" defer></script>
+    <title>Texpert - Printing Products</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </head>
+
 <body>
+
     <header class="header">
         <div class="header-left">
-            <img src="images/logo.jpg" alt="Texpert Logo" class="logo">
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="Texpert Logo" class="logo">
+            </a>
         </div>
         <div class="header-right">
             <nav class="nav-menu">
@@ -29,48 +39,100 @@
         </div>
     </header>
 
-    <section>
-        <h1>Printing Products</h1>
-        
-        <h2>PIGMENT PRODUCTS</h2>
-        <p>Our range of pigment products is designed to deliver vibrant, long-lasting colors across various textiles.</p>
-        
-        <h2>PIGMENT PRINTING AUXILIARIES</h2>
-        <p>Auxiliary products that enhance the pigment printing process, ensuring consistency and quality.</p>
-        
-        <h2>READY PASTES - SPECIAL EFFECTS</h2>
-        <p>Special ready pastes for achieving unique effects like metallic, glitter, and other special finishes.</p>
-        
-        <h2>COATING COMPOUNDS</h2>
-        <p>High-performance coating compounds for a variety of applications, providing excellent coverage and durability.</p>
-        
-        <h2>GARMENT PRINTING PRODUCTS</h2>
-        <p>Products specifically designed for garment printing, offering flexibility and vibrant results.</p>
-        
-        <h2>REACTIVE PRINTING</h2>
-        <p>Reactive printing solutions for bright, vivid colors with excellent wash and light fastness.</p>
-        
-        <h2>DISPERSE DYE PRINTING</h2>
-        <p>Disperse dye printing for synthetic fibers, delivering deep shades and outstanding fastness properties.</p>
-        
-        <h2>ACID DYE PRINTING</h2>
-        <p>Acid dyes for printing on protein fibers, such as silk and wool, known for their bright and rich colors.</p>
-        
-        <h2>VAT DISCHARGE PRINTING</h2>
-        <p>Vat discharge printing techniques for creating patterns on dark fabrics by removing color.</p>
-        
-        <h2>BURN-OUT</h2>
-        <p>Burn-out printing for creating patterns by chemically destroying fibers, leaving a semi-transparent design.</p>
-        
-        <h2>CATIONIC DYE PRINTING</h2>
-        <p>Cationic dye printing for achieving brilliant shades on acrylic fibers with superior fastness properties.</p>
-        
-        <h2>RESIST PRINTING</h2>
-        <p>Resist printing methods for creating designs by preventing dye from penetrating the fabric in specific areas.</p>
-        
-    </section>
+    <div class="main-container"> <!-- Parent container for centering content -->
+
+        <section class="subheader">
+            <h1>PRODUCTS</h1>
+        </section>
+
+        <section class="product-carousel">
+            <div class="carousel-container">
+                <div class="carousel-card selected" style="background-image: url('images/printing.jpg');">
+                    <div class="card-content">
+                        <a href="printing-products.html">Printing</a>
+                    </div>
+                </div>
+                <div class="carousel-card" style="background-image: url('images/dyeing.jpg');">
+                    <div class="card-content">
+                        <a href="dyeing-products.html">Dyeing</a>
+                    </div>
+                </div>
+                <div class="carousel-card" style="background-image: url('images/pre-operation.jpg');">
+                    <div class="card-content">
+                        <a href="pre-operation.html">Pre-Operation</a>
+                    </div>
+                </div>
+                <div class="carousel-card" style="background-image: url('images/finishing.jpg');">
+                    <div class="card-content">
+                        <a href="finishing-products.html">Finishing</a>
+                    </div>
+                </div>
+                <div class="carousel-card" style="background-image: url('images/other.jpg');">
+                    <div class="card-content">
+                        <a href="other-products.html">Other</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h2 style="text-align: center;">Printing Products</h2>
+
+        <section class="product-list">
+            <div class="product-item">
+                <h2>PIGMENT PRODUCTS</h2>
+                <p>Our range of pigment products is designed to deliver vibrant, long-lasting colors across various textiles.</p>
+            </div>
+            <div class="product-item">
+                <h2>PIGMENT PRINTING AUXILIARIES</h2>
+                <p>Auxiliary products that enhance the pigment printing process, ensuring consistency and quality.</p>
+            </div>
+            <div class="product-item">
+                <h2>READY PASTES - SPECIAL EFFECTS</h2>
+                <p>Special ready pastes for achieving unique effects like metallic, glitter, and other special finishes.</p>
+            </div>
+            <div class="product-item">
+                <h2>COATING COMPOUNDS</h2>
+                <p>High-performance coating compounds for a variety of applications, providing excellent coverage and durability.</p>
+            </div>
+            <div class="product-item">
+                <h2>GARMENT PRINTING PRODUCTS</h2>
+                <p>Products specifically designed for garment printing, offering flexibility and vibrant results.</p>
+            </div>
+            <div class="product-item">
+                <h2>REACTIVE PRINTING</h2>
+                <p>Reactive printing solutions for bright, vivid colors with excellent wash and light fastness.</p>
+            </div>
+            <div class="product-item">
+                <h2>DISPERSE DYE PRINTING</h2>
+                <p>Disperse dye printing for synthetic fibers, delivering deep shades and outstanding fastness properties.</p>
+            </div>
+            <div class="product-item">
+                <h2>ACID DYE PRINTING</h2>
+                <p>Acid dyes for printing on protein fibers, such as silk and wool, known for their bright and rich colors.</p>
+            </div>
+            <div class="product-item">
+                <h2>VAT DISCHARGE PRINTING</h2>
+                <p>Vat discharge printing techniques for creating patterns on dark fabrics by removing color.</p>
+            </div>
+            <div class="product-item">
+                <h2>BURN-OUT</h2>
+                <p>Burn-out printing for creating patterns by chemically destroying fibers, leaving a semi-transparent design.</p>
+            </div>
+            <div class="product-item">
+                <h2>CATIONIC DYE PRINTING</h2>
+                <p>Cationic dye printing for achieving brilliant shades on acrylic fibers with superior fastness properties.</p>
+            </div>
+            <div class="product-item">
+                <h2>RESIST PRINTING</h2>
+                <p>Resist printing methods for creating designs by preventing dye from penetrating the fabric in specific areas.</p>
+            </div>
+        </section>
+
+    </div> <!-- End of main-container -->
+
     <footer class="footer">
-        <p>&copy; 2024 Texpert. All rights reserved.</p>
+        <p>&copy; 2024 Texpert</p>
     </footer>
+
 </body>
 </html>
