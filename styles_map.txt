@@ -1,0 +1,48 @@
+                              [ General Styles ]
+                                    |
+             +----------------------------------------------+
+             |                                              |
+           [ body ]                                    [ main ]
+             |                                              |
+             |                                      [ .main-container ]
+             |                                              |
+             |                                              |
+         [ h1, h2, h3, ... ]                              [ .welcome-section ]
+             |                                              |
+         [ p ]                                          [ .image-box ]
+             |                                              |
+       [ .subheader ]                                  [ .textbox ]
+             |                                              |
+   +----------------+                          +-------------------------+
+   |                |                          |                         |
+[ .header ]      [ .footer ]                  [ .textbox.left-right ]  [ .text-box-buttons ]
+   |                |                          |                         |
+   |                |                      [ .image-box-content ]   [ .btn-primary ]
+   |                |                                              |
+[ .header-left ]  [ .header-right ]                        [ .product-carousel ]
+   |                |                                              |
+[ .logo ]     [ .language-toggle ]                            [ .carousel-container ]
+   |                |                                              |
+[ .language-dropdown ]                             [ .carousel-card ]
+   |                |                                              |
+[ .nav-menu ]       [ .contact-section ]                   [ .card-content ]
+   |                |                                              |
+[ .nav-menu ul ]  [ .contact-item ]                           [ .slick-arrow ]
+   |                |                                              |
+[ .nav-menu li ]  [ .contact-info ]                        [ .product-list ]
+   |                |                                              |
+[ .nav-menu a ]   [ .contact-form ]                           [ .product-item ]
+   |                |                                              |
+   |            [ .faq-container ]                       [ .contact-form label ]
+   |                                                [ .contact-form input ]
+   |                                                [ .contact-form textarea ]
+   |                                                [ .contact-form button ]
+   |         
+   |
+[ .text-box-buttons .btn-primary ]
+   |
+[ .carousel-card.selected ]
+   |
+[ .faq-item ]
+   |
+[ .map-section ]

@@ -49,8 +49,9 @@ h2, h3, h4, h5, h6 {
 
 p {
     color: #ffffff;
-    margin-bottom: 1em;
+    margin-bottom: 2.5em;
     font-weight: 100;
+    font-size: 1.6em;
 }
 
 .subheader {
@@ -73,12 +74,12 @@ p {
 /* About Styles */
 .about-us-text-box {
     width: 70%;
-    max-width: 70vw;
     border-radius: 8px; /* Rounded corners */
     padding: 20px; /* Space inside the box */
     margin-top: 20px; /* Space above the section */
+    margin-left: 15%;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-    text-align: center;
+    text-align: justify;
     
 }
 
@@ -91,7 +92,7 @@ p {
     position: fixed;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.);
+    box-shadow: 0 4px 2px rgba(0, 0, 0, 0.7);
     top: 0;
     width: 100%;
     box-sizing: border-box;
@@ -100,8 +101,8 @@ p {
 
 .header-left {
     display: flex;
-    align-items: center;
-    gap: 15px;
+    align-items: left;
+    gap: 5px;
 }
 
 .header-right {
@@ -112,6 +113,7 @@ p {
 
 .logo {
     width: 60%;
+    max-width: 60%;
 }
 
 .language-toggle {
@@ -178,10 +180,9 @@ p {
 
 .nav-menu a {
     display: block;
-    font-size: 2em;
+    font-size: 1.8em;
     text-decoration: none; /* Remove underlines */
     padding: 2vh;
-    font-size: 2em;
     font-weight: 500;
     color: white;
     text-align: center;
@@ -489,13 +490,13 @@ p {
 }
 
 .product-item h2 {
-    font-size: 22px;
+    font-size: 1.7em;
     margin-bottom: 15px;
-    color: #584b83;
+    color: #160dc4;
 }
 
 .product-item p {
-    font-size: 16px;
+    font-size: 18px;
     color: #dbd5d5;
     line-height: 1.5;
 }
@@ -513,13 +514,12 @@ p {
     flex-direction: column;
     align-items: center; /* Center items horizontally */
     text-align: center;
-    padding: 2em 0;
-    margin-top: 20vh;
+    margin-top: 10vh;
+    padding: 5vh;
+
 }
 
 .contact-section .contact-item {
-    margin: 1em 0;
-    max-width: 90%; /* Ensure items don’t exceed container width */
     text-align: center;
 }
 
@@ -532,12 +532,12 @@ p {
     font-size: 1.5em;
     color: #ffffff;
     margin: 0;
+    text-align: center;
 }
 
 .contact-section .contact-item .contact-icon {
     font-size: 3em; /* Adjust size as needed */
     color: #ffffff;
-    margin-bottom: 0.5em;
 }
 
 .contact-section h1{
@@ -578,13 +578,13 @@ p {
 /* Map */
 .map-section {
     width: 100%;
-    margin-top: 10vh;
-    margin-bottom: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
 }
 
 .map-section iframe {
     width: 100%;
-    height: 400px;
+    height: 30vh;
     border: none;
 }
 
@@ -592,17 +592,18 @@ p {
 .contact-form {
     border-radius: 30px;
     max-width: 70%;
-    margin: 0 auto; /* Center the form horizontally */
+    margin-top: 8vh;
 }
 
 .contact-form form {
     display: flex;
     flex-direction: column;
     gap: 60px;
+    margin-top: 5vh;
 }
 
 .contact-form label {
-    font-size: 2em;
+    font-size: 1.8em;
     color: #ddd; /* Adjust color for better readability */
     margin-bottom: 0px; /* Space between label and input */
     text-align: left; /* Left align labels */
@@ -648,21 +649,30 @@ p {
     gap: 10px;
     margin-left: 5vh;
     margin-right: 4vh;
-    padding: 5%;
+    padding: 10%;
 
 }
 
-.faq-item h2 {
-    font-size: 1.5em;
-    margin: 0.5em 0;
-}
-
-.faq-item p {
-    margin: 0.5em 0;
-}
 
 /* Responsive Styles */
 @media (max-width: 768px) {
+    .about-us-text-box {
+        width: 70%;
+        border-radius: 8px; /* Rounded corners */
+        padding: 20px; /* Space inside the box */
+        margin-top: 20px; /* Space above the section */
+        margin-left: 10%;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */        
+    }
+
+    p {
+        color: #ffffff;
+        margin-bottom: 2em;
+        font-weight: 50;
+        font-size: 1.0em;
+        margin: 0.5em 0;
+        text-align: justify;
+    }
 
     .subheader h1 {
         font-size: 1.6em;
@@ -676,8 +686,7 @@ p {
         position: relative;
         text-align: center; /* Center-align the text */
 
-        max-width: 100%; 
-        margin: 0 auto; /* Center horizontally */
+        width: 100vw; 
     }
 
     .header {
@@ -774,30 +783,35 @@ p {
         font-size: 0.2em; 
     }
 
+
+    .map-section iframe {
+        width: 70%;
+        border: none;
+    }
+
     .contact-section {
         border-radius: 10px;
         width: 100%;
         max-width: 100%;
-        margin: 15%;
+        margin: 0%;
         box-sizing: content-box;
         text-align: center;
         align-self: center;
-        margin-top: 10vh;
+        font-size: 0.7em;
     }
     
     .contact-section h1{
-        font-size: 2em;
         margin-bottom: 1px;
         text-align: center;
-        margin-top: 2vh;
-        margin-bottom: 10vh;
         font-weight: 0.5;
     }
 
     .contact-info {
         flex-direction: column; /* Stack info-items vertically on smaller screens */
         gap: 20px; /* Adjust spacing between items for smaller screens */
-        font-size: 0.5em;
+        margin-top: 20px;
+        text-align: center;
+        
     }
 
     .info-item {
@@ -854,7 +868,6 @@ p {
         justify-content: center;
         align-items: center;
         color: white;
-        text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
         transition: transform 0.3s ease-in-out; /* Smooth transition for scaling */
         margin: 0 50px; 
         border-radius: 5px;
@@ -901,6 +914,16 @@ p {
         font-size: 11px;
         color: #dbd5d5;
         line-height: 1.5;
+    }
+
+    .faq-item h2 {
+        font-size: 1.6em;
+        margin: 0.5em 0;
+    }
+    
+    .faq-item p {
+        font-size: 1.0em;
+        margin: 0.5em 0;
     }
 
 
