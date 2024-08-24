@@ -782,6 +782,18 @@ p {
     .footer {
         padding: 0.2em;
         font-size: 0.2em; 
+        justify-content: center;
+        align-self: center;
+    }
+    .footer p{
+
+        color: #ffffff;
+        margin-bottom: 2em;
+        font-weight: 50;
+        font-size: 1.0em;
+        margin: 0.5em 0;
+        text-align: center;
+
     }
 
 
