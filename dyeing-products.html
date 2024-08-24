@@ -4,12 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Texpert - Dyeing Products</title>
-    <link rel="stylesheet" href="../css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
 </head>
+
 <body>
+
     <header class="header">
         <div class="header-left">
-            <img src="images/logo.jpg" alt="Texpert Logo" class="logo">
+            <a href="index.html">
+                <img src="images/logo.jpg" alt="Texpert Logo" class="logo">
+            </a>
         </div>
         <div class="header-right">
             <nav class="nav-menu">
@@ -27,104 +38,159 @@
             </div>
         </div>
     </header>
-    
-    <section class="main-content products-section">
-        <h2>Dyeing Products</h2>
-        <div class="product-grid">
-            <div class="product-box">
-                <h3>Texfix RD</h3>
+
+    <div class="main-container">
+
+        <section class="subheader">
+            <h1>PRODUCTS</h1>
+        </section>
+
+        <section class="product-carousel">
+            <button class="slick-prev slick-arrow"><i class="fas fa-chevron-left"></i></button>
+
+            <div class="carousel-container">
+                <div class="carousel-card" style="background-image: url('images/printing.jpg');">
+                    <div class="card-content">
+                        <a href="printing-products.html">Printing</a>
+                    </div>
+                </div>
+                <div class="carousel-card selected" style="background-image: url('images/dyeing.jpg');">
+                    <div class="card-content">
+                        <a href="dyeing-products.html">Dyeing</a>
+                    </div>
+                </div>
+                <div class="carousel-card" style="background-image: url('images/pre-operation.jpg');">
+                    <div class="card-content">
+                        <a href="pre-operation.html">Pre-Operation</a>
+                    </div>
+                </div>
+                <div class="carousel-card" style="background-image: url('images/finishing.jpg');">
+                    <div class="card-content">
+                        <a href="finishing-products.html">Finishing</a>
+                    </div>
+                </div>
+                <div class="carousel-card" style="background-image: url('images/other.jpg');">
+                    <div class="card-content">
+                        <a href="other-products.html">Other</a>
+                    </div>
+                </div>
+            </div>
+            <button class="slick-next slick-arrow"><i class="fas fa-chevron-right"></i></button>
+        </section>
+
+        <h2 style="text-align: center;">Dyeing Products</h2>
+
+        <section class="product-list">
+            <div class="product-item">
+                <h2>Texfix RD</h2>
                 <p>Pole and reactive paint fixator</p>
             </div>
-            <div class="product-box">
-                <h3>02-WDS</h3>
+            <div class="product-item">
+                <h2>02-WDS</h2>
             </div>
-            <div class="product-box">
-                <h3>03-Sconc</h3>
+            <div class="product-item">
+                <h2>03-Sconc</h2>
             </div>
-            <div class="product-box">
-                <h3>Texwash SB</h3>
+            <div class="product-item">
+                <h2>Texwash SB</h2>
                 <p>Reactive washing agent.</p>
             </div>
-            <div class="product-box">
-                <h3>Texwash Ps</h3>
+            <div class="product-item">
+                <h2>Texwash Ps</h2>
                 <p>Paint and printing washing agent.</p>
             </div>
-            <div class="product-box">
-                <h3>Texcrease PCR</h3>
+            <div class="product-item">
+                <h2>Texcrease PCR</h2>
                 <p>Fracture anti-fracture for polyester</p>
             </div>
-            <div class="product-box">
-                <h3>Texcrease Plo</h3>
+            <div class="product-item">
+                <h2>Texcrease Plo</h2>
                 <p>Natural and synthetic painting fracture preventive (paint bath lubricant)</p>
             </div>
-            <div class="product-box">
-                <h3>Texpers Pes</h3>
+            <div class="product-item">
+                <h2>Texpers Pes</h2>
                 <p>Polyester Dispergator/Egalizator</p>
             </div>
-            <div class="product-box">
-                <h3>Texpers mig</h3>
+            <div class="product-item">
+                <h2>Texpers mig</h2>
                 <p>Polyester migraine</p>
             </div>
-            <div class="product-box">
-                <h3>Texpers Car</h3>
+            <div class="product-item">
+                <h2>Texpers Car</h2>
                 <p>Polyester Carrieri</p>
             </div>
-            <div class="product-box">
-                <h3>Excelan PLT</h3>
+            <div class="product-item">
+                <h2>Excelan PLT</h2>
                 <p>Reductive washing agent operating in acidic environment</p>
             </div>
-            <div class="product-box">
-                <h3>ASIDYE EGL</h3>
+            <div class="product-item">
+                <h2>ASIDYE EGL</h3>
                 <p>Egalizer used in polyamide painting.</p>
             </div>
-            <div class="product-box">
-                <h3>TexClean BSK</h3>
+            <div class="product-item">
+                <h2>TexClean BSK</h2>
                 <p>Dispers Printing, Reductive Washing and Floor Cleaning Material</p>
             </div>
-            <div class="product-box">
-                <h3>ASIDYE EDA</h3>
+            <div class="product-item">
+                <h2>ASIDYE EDA</h2>
                 <p>Egalizator developed for polyamide fabrics showing fiber afinity differences</p>
             </div>
-            <div class="product-box">
-                <h3>ASIDYE R -FIX</h3>
+            <div class="product-item">
+                <h2>ASIDYE R-FIX</h2>
                 <p>Performance healing and reserve substance used in polyamide dyeing</p>
             </div>
-            <div class="product-box">
-                <h3>ASIDYE DNR</h3>
+            <div class="product-item">
+                <h2>ASIDYE DNR</h2>
                 <p>Acid transmitter in polyamide and wool painting</p>
             </div>
-            <div class="product-box">
-                <h3>Texfix RD</h3>
+            <div class="product-item">
+                <h2>Texfix RD</h2>
                 <p>Pole and reactive paint fixator</p>
             </div>
-            <div class="product-box">
-                <h3>Texfix RD</h3>
+            <div class="product-item">
+                <h2>Texfix RD</h2>
                 <p>Acid donor in nylon painting</p>
             </div>
-            <div class="product-box">
-                <h3>Texquest QS</h3>
+            <div class="product-item">
+                <h2>Texquest QS</h2>
                 <p>Ion holder and dyspergator for previews and painting.</p>
             </div>
-            <div class="product-box">
-                <h3>Texwet PDB</h3>
+            <div class="product-item">
+                <h2>Texwet PDB</h2>
                 <p>Anionic, low foamy, powerful alkali environments effective, wetting in high stability.</p>
             </div>
-            <div class="product-box">
-                <h3>Expert chemistry</h3>
+            <div class="product-item">
+                <h2>Expert chemistry</h2>
             </div>
-            <div class="product-box">
-                <h3>NANOSHADER SYSTEM</h3>
+            <div class="product-item">
+                <h2>NANOSHADER SYSTEM</h2>
                 <p>DÜZBOYAMA NUANTING SYSTEM</p>
             </div>
-            <div class="product-box">
-                <h3>Texprove Wan</h3>
+            <div class="product-item">
+                <h2>Texprove Wan</h2>
                 <p>Texprove WAN Printing and Straight Bolt Color Efficiency Increase</p>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section class="welcome-section">
+            <div class="textbox left-right">
+                <div class="textbox-left">
+                    <p>Questions?</p>
+                    <a href="faq.html" class="btn btn-primary">Visit FAQ</a>
+                </div>
+                <div class="textbox-right">
+                    <p>Interested?</p>
+                    <a href="contact.html" class="btn btn-primary">Contact Us</a>
+                </div>
+            </div>
+
+        </section>
+
+    </div> <!-- End of main-container -->
 
     <footer class="footer">
-        <p>&copy; 2024 Texpert. All rights reserved.</p>
+        <p>&copy; 2024 Texpert</p>
     </footer>
+
 </body>
 </html>
